@@ -2,7 +2,8 @@ from tkinter import *
 
 win = Tk()
 win.title("mile to km converter")
-win.minsize(width=400, height=100)
+win.minsize(width=300, height=200)
+win.config(padx=15,pady=20)
 x = 0
 
 
@@ -31,17 +32,24 @@ def switch():
 
 mile = Label(text="Mile")
 mile.grid(column=2, row=0)
+
 km = Label(text="Km")
 km.grid(column=2, row=1)
+km.config(pady=15,padx=15)
+
 is_equal = Label(text="is equal to")
 is_equal.grid(column=0, row=1)
 is_equal.config(padx=50)
+
 input_mile = Entry(width=13)
 input_mile.grid(column=1, row=0)
+
 output_km = Text(height=1, width=10)
 output_km.grid(column=1, row=1)
+
 clac = Button(text="calculate", command=cal)
 clac.grid(column=1, row=2)
+
 switch_button = Button(text="switch", command=switch)
 switch_button.grid(column=1, row=3)
 
